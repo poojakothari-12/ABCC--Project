@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pooja's Modern Developer Portfolio - BCA Student, C Programmer, and National Hackathon Finalist. Explore projects, skills, experience, and achievements.">
+  <meta name="keywords" content="Pooja, BCA, C Programming, Portfolio, National Hackathons, Data Structures, Software Developer">
+  <meta name="author" content="Pooja">
+  <title>Pooja | BCA & C Programmer - Modern Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Glow & Background Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Pooja</span>
+        <span class="brand-ext">.c</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link"><i class="fas fa-user-circle"></i> About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+          <li class="nav-item"><a href="#hackathons" class="nav-link highlight-pill"><i class="fas fa-trophy"></i> Hackathons</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link"><i class="fas fa-award"></i> Awards</a></li>
+          <li class="nav-item"><a href="#terminal" class="nav-link"><i class="fas fa-terminal"></i> Terminal</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <i class="fas fa-moon moon-icon"></i>
+          <i class="fas fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Resume Button -->
+        <a href="#contact" class="btn btn-outline btn-sm desktop-only">
+          <i class="fas fa-file-download"></i> <span>Resume</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot pulse"></span>
+            <span>Available for Tech Roles &amp; Internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Pooja</span>
+          </h1>
+
+          <div class="hero-subtitle-wrapper">
+            <span class="typewriter-prefix">I am a </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-desc">
+            A passionate <strong>BCA student</strong> &amp; <strong>C programmer</strong> who thrives on building fast, memory-efficient systems, mastering algorithms, and winning <strong>national-level hackathons</strong> under tight 24-48 hour sprints.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-layer-group"></i> Explore Projects
+            </a>
+            <a href="#hackathons" class="btn btn-secondary">
+              <i class="fas fa-trophy"></i> Hackathon Journey
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <i class="fas fa-paper-plane"></i> Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:pooja.bca.dev@gmail.com" class="social-icon" title="Send Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#terminal" class="social-icon" title="Interactive Terminal">
+              <i class="fas fa-terminal"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Code Editor Card -->
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="code-window-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-title">
+                <i class="fas fa-code"></i> pooja_profile.c
+              </div>
+              <div class="window-actions">
+                <button class="copy-code-btn" id="copyCodeBtn" title="Copy C snippet">
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+            </div>
+            <pre class="code-body"><code><span class="code-comment">/* Pooja | BCA Graduate &amp; Developer */</span>
+<span class="code-keyword">#include</span> <span class="code-string">&lt;stdio.h&gt;</span>
+<span class="code-keyword">#include</span> <span class="code-string">&lt;stdlib.h&gt;</span>
+
+<span class="code-keyword">typedef struct</span> {
+    <span class="code-type">char</span>* name;
+    <span class="code-type">char</span>* degree;
+    <span class="code-type">char</span>* coreLanguage;
+    <span class="code-type">int</span>   nationalHackathons;
+    <span class="code-type">char</span>* mindset;
+} <span class="code-type">Developer</span>;
+
+<span class="code-type">int</span> <span class="code-func">main</span>() {
+    <span class="code-type">Developer</span> pooja = {
+        .<span class="code-prop">name</span> = <span class="code-string">"Pooja"</span>,
+        .<span class="code-prop">degree</span> = <span class="code-string">"BCA"</span>,
+        .<span class="code-prop">coreLanguage</span> = <span class="code-string">"C (Pointers, Memory, DSA)"</span>,
+        .<span class="code-prop">nationalHackathons</span> = <span class="code-number">5</span>,
+        .<span class="code-prop">mindset</span> = <span class="code-string">"Clean Code &amp; Speed"</span>
+    };
+    
+    <span class="code-func">printf</span>(<span class="code-string">"🚀 Building future-ready systems!\n"</span>);
+    <span class="code-keyword">return</span> <span class="code-number">0</span>;
+}</code></pre>
+            <div class="code-window-footer">
+              <span class="status-tag"><i class="fas fa-check-circle"></i> Compiled: gcc -O3 -Wall</span>
+              <span class="status-tag tag-lang">ANSI C99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="container hero-stats-container">
+        <div class="stats-grid">
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon"><i class="fas fa-medal"></i></div>
+            <div class="stat-info">
+              <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">National Hackathons</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="stat-info">
+              <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">C &amp; Tech Projects</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+            <div class="stat-info">
+              <span class="stat-number" data-target="450">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">DSA Problems Solved</span>
+            </div>
+          </div>
+
+          <div class="stat-card" data-tilt>
+            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="stat-info">
+              <span class="stat-number" data-target="9">0</span><span class="stat-plus">.2</span>
+              <span class="stat-label">BCA Academic CGPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-user-astronaut"></i> Getting to know me</span>
+          <h2 class="section-title">About <span class="gradient-text">Pooja</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Bridging strong theoretical computer science concepts with low-level execution and high-speed hackathon innovation.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card-main">
+            <div class="about-avatar-wrapper">
+              <div class="avatar-ring">
+                <div class="avatar-inner">
+                  <i class="fas fa-laptop-code avatar-icon"></i>
+                </div>
+              </div>
+              <div class="badge-floating badge-top">
+                <i class="fas fa-bolt"></i> Fast Learner
+              </div>
+              <div class="badge-floating badge-bottom">
+                <i class="fas fa-brain"></i> Algorithmic Thinker
+              </div>
+            </div>
+
+            <div class="about-bio">
+              <h3>Hello World! I'm <span class="text-primary">Pooja</span>.</h3>
+              <p>
+                Currently pursuing my <strong>Bachelor of Computer Applications (BCA)</strong>, I have cultivated a deep-rooted passion for computer programming and systems architecture. While many developers begin with high-level scripting, I fell in love with <strong>C programming</strong> — understanding raw memory layouts, manual allocation with <code>malloc</code> and <code>free</code>, pointers, and bitwise manipulation.
+              </p>
+              <p>
+                This foundation gave me an immense competitive edge in <strong>National Level Hackathons</strong>, where I regularly architect robust algorithms, collaborate with diverse teams under pressure, and turn ambiguous problem statements into functional, high-performance software.
+              </p>
+
+              <div class="about-meta-grid">
+                <div class="meta-item">
+                  <span class="meta-label"><i class="fas fa-graduation-cap"></i> Degree</span>
+                  <span class="meta-value">BCA (Computer Applications)</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label"><i class="fas fa-code"></i> Primary Language</span>
+                  <span class="meta-value">C (Data Structures &amp; Systems)</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                  <span class="meta-value">India (Open to Relocation/Remote)</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label"><i class="fas fa-check-double"></i> Hackathons</span>
+                  <span class="meta-value">National Level Competitor &amp; Finalist</span>
+                </div>
+              </div>
+
+              <div class="about-actions">
+                <a href="#contact" class="btn btn-primary">
+                  <i class="fas fa-calendar-check"></i> Discuss an Opportunity
+                </a>
+                <button class="btn btn-outline" id="downloadResumeBtn">
+                  <i class="fas fa-file-pdf"></i> Download CV / Resume
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon bg-blue"><i class="fas fa-microchip"></i></div>
+              <div class="pillar-content">
+                <h4>Low-Level Mastery</h4>
+                <p>Fluent in C: manual pointers, cache friendliness, dynamic memory management, structs, and bitwise operations.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-purple"><i class="fas fa-trophy"></i></div>
+              <div class="pillar-content">
+                <h4>Hackathon Grit</h4>
+                <p>Experienced in rapid ideation, building Minimum Viable Products (MVPs) in 24 hours, and pitching to industry juries.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-cyan"><i class="fas fa-network-wired"></i></div>
+              <div class="pillar-content">
+                <h4>Algorithmic Problem Solving</h4>
+                <p>Solid grasp of arrays, linked lists, trees, graphs, sorting algorithms, and complexity analysis (Big-O notation).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-cogs"></i> Technical Proficiency</span>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span> &amp; Toolkit</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">A balanced toolkit rooted in C systems engineering, algorithms, modern development tools, and computer applications.</p>
+        </div>
+
+        <!-- Filter tabs for skills -->
+        <div class="skills-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Skills</button>
+          <button class="filter-tab" data-filter="core">C &amp; Core Programming</button>
+          <button class="filter-tab" data-filter="dsa">DSA &amp; Concepts</button>
+          <button class="filter-tab" data-filter="tools">Tools &amp; Environment</button>
+          <button class="filter-tab" data-filter="web">Web &amp; Database</button>
+        </div>
+
+        <div class="skills-cards-grid">
+          <!-- C Programming (Featured Highlight) -->
+          <div class="skill-card featured-skill" data-category="core">
+            <div class="skill-card-top">
+              <div class="skill-icon c-lang-icon">
+                <span>C</span>
+              </div>
+              <div class="skill-badge-top">Primary Weapon</div>
+            </div>
+            <h3 class="skill-name">C Programming Language</h3>
+            <p class="skill-description">Advanced mastery of pointers, pointer arithmetic, memory management (malloc, calloc, realloc, free), structs, file I/O, bitwise manipulations, and multi-file project architecture with Makefiles.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 95%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>Pointers</span>
+              <span>Memory Leaks</span>
+              <span>POSIX</span>
+              <span>Valgrind</span>
+              <span>File Handling</span>
+            </div>
+          </div>
+
+          <!-- Data Structures & Algorithms -->
+          <div class="skill-card" data-category="dsa">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-cyan">
+                <i class="fas fa-sitemap"></i>
+              </div>
+              <span class="skill-level-pill">Advanced</span>
+            </div>
+            <h3 class="skill-name">Data Structures &amp; Algorithms</h3>
+            <p class="skill-description">Implemented dynamic arrays, singly/doubly linked lists, stacks, queues, binary search trees, hash tables, Dijkstra's algorithm, and graph traversals (BFS/DFS) in pure C.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>Time/Space Big-O</span>
+              <span>Trees &amp; Graphs</span>
+              <span>Sorting</span>
+            </div>
+          </div>
+
+          <!-- C++ & Object Oriented Programming -->
+          <div class="skill-card" data-category="core">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-blue">
+                <i class="fas fa-code"></i>
+              </div>
+              <span class="skill-level-pill">Intermediate</span>
+            </div>
+            <h3 class="skill-name">C++ &amp; OOP Foundations</h3>
+            <p class="skill-description">Understanding object-oriented paradigms, classes, inheritance, polymorphism, encapsulation, and foundational Standard Template Library (STL vectors, maps, algorithms).</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">82%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 82%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>OOPs</span>
+              <span>STL</span>
+              <span>Classes</span>
+            </div>
+          </div>
+
+          <!-- Linux / Unix & Terminal -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-purple">
+                <i class="fab fa-linux"></i>
+              </div>
+              <span class="skill-level-pill">Proficient</span>
+            </div>
+            <h3 class="skill-name">Linux &amp; Shell Scripting</h3>
+            <p class="skill-description">Comfortable navigating Unix/Linux environments, GCC compiler flags, GDB debugging, Valgrind memory inspection, pipes, redirection, and bash scripting.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>Bash</span>
+              <span>GCC/Clang</span>
+              <span>GDB</span>
+              <span>Gnu Make</span>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-orange">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <span class="skill-level-pill">Proficient</span>
+            </div>
+            <h3 class="skill-name">Git &amp; Version Control</h3>
+            <p class="skill-description">Branch management, pull requests, resolving merge conflicts, collaborative git workflows during 24-hour fast-paced hackathons, and semantic commit history.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 88%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>GitHub</span>
+              <span>Git Flow</span>
+              <span>Collaboration</span>
+            </div>
+          </div>
+
+          <!-- Relational Database & SQL -->
+          <div class="skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-green">
+                <i class="fas fa-database"></i>
+              </div>
+              <span class="skill-level-pill">Intermediate</span>
+            </div>
+            <h3 class="skill-name">DBMS &amp; SQL</h3>
+            <p class="skill-description">Database normalization (1NF to BCNF), relational schema design, complex joins, indexing, and integrating SQLite/MySQL with application backends.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 80%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>MySQL</span>
+              <span>Queries</span>
+              <span>ER Diagrams</span>
+            </div>
+          </div>
+
+          <!-- Web Fundamentals (HTML5 / CSS3 / JS) -->
+          <div class="skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-teal">
+                <i class="fab fa-html5"></i>
+              </div>
+              <span class="skill-level-pill">Competent</span>
+            </div>
+            <h3 class="skill-name">Web Essentials (HTML, CSS, JS)</h3>
+            <p class="skill-description">Creating responsive UI layouts, semantic HTML, modern styling, and lightweight JavaScript for rapid hackathon presentation frontends and dashboards.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">78%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 78%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>Responsive UI</span>
+              <span>DOM Manipulation</span>
+              <span>Clean Design</span>
+            </div>
+          </div>
+
+          <!-- Hackathon & Problem Solving Mindset -->
+          <div class="skill-card" data-category="dsa">
+            <div class="skill-card-top">
+              <div class="skill-icon icon-gold">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <span class="skill-level-pill">Superpower</span>
+            </div>
+            <h3 class="skill-name">Hackathon Problem Solving</h3>
+            <p class="skill-description">Fast-paced decomposition of complex problem statements, system feasibility analysis, team sprint coordination, and presenting compelling technical pitches to judges.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-label">
+                <span>Proficiency</span>
+                <span class="skill-percent">94%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="progress-fill" style="--skill-width: 94%;"></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span>Rapid Prototyping</span>
+              <span>Pitching</span>
+              <span>Team Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HACKATHONS SECTION (FEATURED) -->
+    <section class="section hackathons-section" id="hackathons">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-featured"><i class="fas fa-fire"></i> High Octane Arena</span>
+          <h2 class="section-title">National <span class="gradient-text">Hackathons</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Where code meets adrenaline. Showcasing intense nationwide 24h &amp; 36h software marathons where I engineered core solutions and led teams to victory.</p>
+        </div>
+
+        <div class="hackathons-timeline">
+          <!-- Hackathon 1 -->
+          <div class="hackathon-card featured-hackathon">
+            <div class="hackathon-badge-corner">
+              <i class="fas fa-award"></i> National Finalist
+            </div>
+            <div class="hackathon-header">
+              <div class="hackathon-org">
+                <span class="org-icon"><i class="fas fa-flag-checkered"></i></span>
+                <div>
+                  <h3 class="hackathon-title">Smart India Hackathon (SIH) — National Stage</h3>
+                  <span class="hackathon-sub">Ministry of Education &amp; Innovation Cell Initiative</span>
+                </div>
+              </div>
+              <span class="hackathon-duration"><i class="far fa-clock"></i> 36 Hours Non-Stop</span>
+            </div>
+
+            <div class="hackathon-body">
+              <div class="hackathon-details">
+                <div class="detail-block">
+                  <span class="detail-label"><i class="fas fa-bullseye"></i> Problem Statement:</span>
+                  <p>Real-Time Dynamic Emergency Resource Dispatch &amp; Traffic Bottleneck Detection for smart cities under critical network constraints.</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label"><i class="fas fa-code-branch"></i> Pooja's Role &amp; Contribution:</span>
+                  <p>Spearheaded the algorithmic core in <strong>C</strong>, building an ultra-fast Dijkstra and min-heap graph calculation engine that reduced route calculation latency by <strong>68%</strong> compared to traditional script solutions. Coordinated team tasks and delivered the live final jury pitch.</p>
+                </div>
+              </div>
+
+              <div class="hackathon-meta-row">
+                <div class="tech-stack-pills">
+                  <span class="pill"><i class="fas fa-bolt"></i> C Language</span>
+                  <span class="pill">Graph Algorithms</span>
+                  <span class="pill">Heap Optimization</span>
+                  <span class="pill">Multi-Threading</span>
+                  <span class="pill">Team Lead</span>
+                </div>
+                <div class="hackathon-result">
+                  <span class="result-badge rank-gold"><i class="fas fa-trophy"></i> Top 5 in National Nodal Center</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hackathon 2 -->
+          <div class="hackathon-card">
+            <div class="hackathon-badge-corner rank-runner">
+              <i class="fas fa-medal"></i> 1st Runner Up (Rank #2)
+            </div>
+            <div class="hackathon-header">
+              <div class="hackathon-org">
+                <span class="org-icon"><i class="fas fa-laptop-code"></i></span>
+                <div>
+                  <h3 class="hackathon-title">National Tech-Sprint 24H Hackathon</h3>
+                  <span class="hackathon-sub">All-India Inter-University Software Sprint (160+ Teams)</span>
+                </div>
+              </div>
+              <span class="hackathon-duration"><i class="far fa-clock"></i> 24 Hours Hackathon</span>
+            </div>
+
+            <div class="hackathon-body">
+              <div class="hackathon-details">
+                <div class="detail-block">
+                  <span class="detail-label"><i class="fas fa-bullseye"></i> Project Built:</span>
+                  <p><strong>ByteCompress</strong> — High-Performance Lossless File Compression Engine built completely in C with custom Huffman binary trees and bitwise packing.</p>
+                </div>
+                <div class="detail-block">
+                  <span class="detail-label"><i class="fas fa-star"></i> Outcome &amp; Impact:</span>
+                  <p>Achieved <strong>48% file size reduction</strong> on text and log streams with zero memory leaks verified by Valgrind. Awarded <strong>₹25,000 Cash Prize</strong> &amp; Trophy.</p>
+                </div>
+              </div>
+
+              <div class="hackathon-meta-row">
+                <div class="tech-stack-pills">
+                  <span class="pill">C99</span>
+                  <span class="pill">Bitwise Stream I/O</span>
+                  <span class="pill">Binary Trees</span>
+                  <span class="pill">Valgrind Clean</span>
+                </div>
+                <div class="hackathon-result">
+                  <span class="result-badge rank-silver"><i class="fas fa-certificate"></i> Cash Prize + Trophy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hackathon 3 -->
+          <div class="hackathon-card">
+            <div class="hackathon-badge-corner rank-innovator">
+              <i class="fas fa-lightbulb"></i> Best Technical Innovation
+            </div>
+            <div class="hackathon-header">
+              <div class="hackathon-org">
+                <span class="org-icon"><i class="fas fa-shield-alt"></i></span>
+                <div>
+                  <h3 class="hackathon-title">CyberHack National Collegiate Hackathon</h3>
+                  <span class="hackathon-sub">National Level Systems &amp; Security Challenge</span>
+                </div>
+              </div>
+              <span class="hackathon-duration"><i class="far fa-clock"></i> 30 Hours Challenge</span>
+            </div>
+
+            <div class="hackathon-body">
+              <div class="hackathon-details">
+                <div class="detail-block">
+                  <span class="detail-label"><i class="fas fa-bullseye"></i> Project Built:</span>
+                  <p><strong>SafePtr (C Memory Safety Wrapper)</strong> — Lightweight runtime instrumentation that intercepts pointer allocations to flag buffer overflows and double-free vulnerabilities in C source code.</p>
+                </div>
+              </div>
+
+              <div class="hackathon-meta-row">
+                <div class="tech-stack-pills">
+                  <span class="pill">C Systems</span>
+                  <span class="pill">Pointer Sanitization</span>
+                  <span class="pill">Static/Dynamic Analysis</span>
+                </div>
+                <div class="hackathon-result">
+                  <span class="result-badge rank-bronze"><i class="fas fa-star"></i> Best Innovation Award</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hackathon Highlights Banner -->
+        <div class="hackathon-summary-banner">
+          <div class="summary-item">
+            <div class="summary-icon"><i class="fas fa-stopwatch"></i></div>
+            <div class="summary-text">
+              <h4>120+ Hackathon Hours</h4>
+              <p>Thriving under strict deadlines, agile collaboration, and sleep-deprived focus.</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-icon"><i class="fas fa-users"></i></div>
+            <div class="summary-text">
+              <h4>Team Captaincy</h4>
+              <p>Led 4-person multidisciplinary teams through brainstorming, architecture, and live demos.</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="summary-text">
+              <h4>Compelling Pitches</h4>
+              <p>Presented technical architectures directly to industry evaluators, receiving stellar reviews.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-cubes"></i> Code in Action</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">A showcase of software engineered from scratch in C and modern tooling, emphasizing memory safety, efficiency, and modular code.</p>
+        </div>
+
+        <!-- Projects Filter -->
+        <div class="projects-filter-tabs">
+          <button class="proj-tab active" data-filter="all">All Projects</button>
+          <button class="proj-tab" data-filter="c-lang">Pure C Systems</button>
+          <button class="proj-tab" data-filter="hackathons">Hackathon Builds</button>
+          <button class="proj-tab" data-filter="dsa">Algorithms &amp; Data</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Unix-like Shell in C -->
+          <div class="project-card" data-category="c-lang" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-terminal"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('shell')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">Systems Programming</div>
+            <h3 class="project-title">Custom Unix-like Shell (C-Shell)</h3>
+            <p class="project-description">
+              A POSIX-compliant interactive command-line shell written in pure C. Features process forking (<code>fork()</code>), binary execution (<code>execvp()</code>), piping (<code>|</code>), I/O redirection (<code>&gt;, &gt;&gt;, &lt;</code>), and background process tracking.
+            </p>
+            <div class="project-tech-tags">
+              <span>C99</span>
+              <span>POSIX API</span>
+              <span>Process Management</span>
+              <span>Pipes</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-check"></i> Zero Memory Leaks</span>
+              <button class="btn-text" onclick="openProjectModal('shell')">Learn More &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Project 2: Huffman File Compressor -->
+          <div class="project-card" data-category="c-lang hackathons dsa" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-file-archive"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('huffman')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">Hackathon Winner &bull; DSA</div>
+            <h3 class="project-title">Huffman Lossless File Compressor</h3>
+            <p class="project-description">
+              A high-speed lossless file compression and decompression engine. Builds frequency min-heaps, constructs prefix-free binary Huffman trees, and writes bit-packed output streams with an embedded deserialization header.
+            </p>
+            <div class="project-tech-tags">
+              <span>C</span>
+              <span>Bit Manipulation</span>
+              <span>Min-Heap</span>
+              <span>Binary Trees</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-compress-arrows-alt"></i> 48% Avg Reduction</span>
+              <button class="btn-text" onclick="openProjectModal('huffman')">Learn More &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Project 3: Bank & Vault Record Management -->
+          <div class="project-card" data-category="c-lang" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-vault"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('bank')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">BCA Core Project</div>
+            <h3 class="project-title">CLI Bank &amp; Account Vault System</h3>
+            <p class="project-description">
+              A full-featured banking ledger and secure record system built in C. Utilizes encrypted binary file storage, hashed PIN verification, transaction journaling, and customer record indexing with dynamic arrays.
+            </p>
+            <div class="project-tech-tags">
+              <span>C</span>
+              <span>Binary File I/O</span>
+              <span>Hashing</span>
+              <span>Structures</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-shield-alt"></i> XOR Encrypted Storage</span>
+              <button class="btn-text" onclick="openProjectModal('bank')">Learn More &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Project 4: Simulated Dynamic Memory Allocator -->
+          <div class="project-card" data-category="c-lang dsa" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-memory"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('allocator')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">Advanced C</div>
+            <h3 class="project-title">Custom Heap Memory Allocator</h3>
+            <p class="project-description">
+              Custom implementation of <code>my_malloc</code>, <code>my_free</code>, and <code>my_realloc</code> over a virtual memory pool. Features an explicit free list, first-fit and best-fit algorithms, and boundary tag coalescing to prevent heap fragmentation.
+            </p>
+            <div class="project-tech-tags">
+              <span>C</span>
+              <span>Memory Pools</span>
+              <span>Doubly-Linked List</span>
+              <span>Coalescing</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-tachometer-alt"></i> Constant Time Coalesce</span>
+              <button class="btn-text" onclick="openProjectModal('allocator')">Learn More &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Project 5: SIH Disaster Resource Routing Engine -->
+          <div class="project-card" data-category="hackathons dsa" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-route"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('sih')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">National Hackathon Project</div>
+            <h3 class="project-title">Smart Disaster Dispatch Optimizer</h3>
+            <p class="project-description">
+              Engineered during the Smart India Hackathon. Computes optimal multi-stop routes for rescue vehicles on dynamically weighted road networks. Uses dynamic adjacency lists and priority queues in C for near-instant calculations.
+            </p>
+            <div class="project-tech-tags">
+              <span>C</span>
+              <span>Dijkstra's Algo</span>
+              <span>Graph Theory</span>
+              <span>Priority Queue</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-clock"></i> 0.04ms Average Latency</span>
+              <button class="btn-text" onclick="openProjectModal('sih')">Learn More &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Project 6: Matrix & Vector Linear Algebra Library -->
+          <div class="project-card" data-category="c-lang dsa" data-tilt>
+            <div class="project-card-header">
+              <div class="project-folder-icon"><i class="fas fa-calculator"></i></div>
+              <div class="project-links">
+                <button class="project-preview-btn" onclick="openProjectModal('matrix')" title="View Project Details">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-category">Scientific Computing</div>
+            <h3 class="project-title">C-Matrix: High Speed Linear Math</h3>
+            <p class="project-description">
+              Modular C header-and-source library for 2D/3D matrix operations, determinants, inverses via Gaussian elimination, eigenvalue approximations, and cache-blocked matrix multiplication.
+            </p>
+            <div class="project-tech-tags">
+              <span>C</span>
+              <span>Linear Algebra</span>
+              <span>Cache Optimization</span>
+              <span>Pointers</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-stat"><i class="fas fa-bolt"></i> 4x Faster Multiplication</span>
+              <button class="btn-text" onclick="openProjectModal('matrix')">Learn More &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & LEADERSHIP SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-history"></i> Career &amp; Roles</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Leadership</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Demonstrated commitment to technical mentorship, leading teams in high-stress hackathons, and contributing to software projects.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - Present</div>
+            <div class="timeline-card">
+              <div class="role-badge">Leadership</div>
+              <h3 class="role-title">Technical Lead &amp; Mentor</h3>
+              <h4 class="role-org"><i class="fas fa-university"></i> Department Coding Club &bull; BCA</h4>
+              <p class="role-desc">
+                Organized and conducted peer-to-peer workshops on <strong>C Programming</strong>, pointer debugging, and foundational Data Structures for over 60+ first- and second-year BCA students. Prepared problem sets, conducted live coding demos, and led hackathon prep bootcamps.
+              </p>
+              <ul class="role-highlights">
+                <li><i class="fas fa-check-circle"></i> Mentored 4 teams who subsequently qualified for regional coding competitions.</li>
+                <li><i class="fas fa-check-circle"></i> Created a structured 30-day "Mastering C &amp; Pointers" open-source study repo.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - 2024</div>
+            <div class="timeline-card">
+              <div class="role-badge">National Level</div>
+              <h3 class="role-title">Lead Architect &amp; Hackathon Captain</h3>
+              <h4 class="role-org"><i class="fas fa-users-cog"></i> Inter-College Hackathon Squad</h4>
+              <p class="role-desc">
+                Formed and captained an agile 4-member student team for multiple national-level 24h &amp; 36h hackathons. Responsible for breaking down complex problem statements, allocating technical modules, ensuring Git synchronization under pressure, and pitching live to panels of industry judges.
+              </p>
+              <ul class="role-highlights">
+                <li><i class="fas fa-check-circle"></i> Led team to National Finalist position in Smart India Hackathon.</li>
+                <li><i class="fas fa-check-circle"></i> Maintained 100% on-time project submissions across all participating hackathons.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Summer 2024</div>
+            <div class="timeline-card">
+              <div class="role-badge">Internship</div>
+              <h3 class="role-title">Software Development Intern (Systems &amp; C)</h3>
+              <h4 class="role-org"><i class="fas fa-building"></i> Tech Innovation Lab</h4>
+              <p class="role-desc">
+                Worked on writing modular C code for data processing tools and validating input files against schema formats. Participated in daily standups, code reviews, writing test suites, and eliminating memory leaks using GDB and Valgrind.
+              </p>
+              <ul class="role-highlights">
+                <li><i class="fas fa-check-circle"></i> Reduced file parsing overhead by 30% through buffered binary I/O.</li>
+                <li><i class="fas fa-check-circle"></i> Authored comprehensive technical documentation and unit test cases.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-star"></i> Honors &amp; Badges</span>
+          <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Milestones validating dedication to academic excellence, algorithmic mastery, and competitive spirit.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1 -->
+          <div class="achievement-card">
+            <div class="achievement-icon gold"><i class="fas fa-trophy"></i></div>
+            <div class="achievement-content">
+              <h3>National Finalist &bull; SIH</h3>
+              <p class="achievement-issuer">Ministry of Education, Govt. of India</p>
+              <p class="achievement-desc">Selected among the top 1% teams nationwide for innovative smart civic problem solving.</p>
+              <span class="achievement-year">2024</span>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="achievement-card">
+            <div class="achievement-icon silver"><i class="fas fa-award"></i></div>
+            <div class="achievement-content">
+              <h3>1st Runner Up (Rank #2)</h3>
+              <p class="achievement-issuer">National Tech-Sprint Hackathon</p>
+              <p class="achievement-desc">Awarded out of 160+ participating collegiate teams for ByteCompress Huffman C Engine.</p>
+              <span class="achievement-year">2024</span>
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="achievement-card">
+            <div class="achievement-icon cyan"><i class="fas fa-star-half-alt"></i></div>
+            <div class="achievement-content">
+              <h3>5-Star Gold Badge in C</h3>
+              <p class="achievement-issuer">HackerRank &bull; Problem Solving</p>
+              <p class="achievement-desc">Demonstrated high proficiency in C programming, pointers, recursion, and dynamic structures.</p>
+              <span class="achievement-year">Verified</span>
+            </div>
+          </div>
+
+          <!-- Achievement 4 -->
+          <div class="achievement-card">
+            <div class="achievement-icon purple"><i class="fas fa-graduation-cap"></i></div>
+            <div class="achievement-content">
+              <h3>Academic Excellence Award</h3>
+              <p class="achievement-issuer">Bachelor of Computer Applications (BCA)</p>
+              <p class="achievement-desc">Ranked within the top 5% of the university batch with consistent 9.2+ CGPA.</p>
+              <span class="achievement-year">2023 - 2025</span>
+            </div>
+          </div>
+
+          <!-- Achievement 5 -->
+          <div class="achievement-card">
+            <div class="achievement-icon orange"><i class="fas fa-code"></i></div>
+            <div class="achievement-content">
+              <h3>Data Structures in C Certified</h3>
+              <p class="achievement-issuer">NPTEL / Technical Board</p>
+              <p class="achievement-desc">Completed comprehensive elite certification covering trees, graphs, heaps, and complexity.</p>
+              <span class="achievement-year">Elite Certification</span>
+            </div>
+          </div>
+
+          <!-- Achievement 6 -->
+          <div class="achievement-card">
+            <div class="achievement-icon green"><i class="fas fa-certificate"></i></div>
+            <div class="achievement-content">
+              <h3>Best Technical Pitch Award</h3>
+              <p class="achievement-issuer">State Level Innovation Summit</p>
+              <p class="achievement-desc">Recognized for articulating complex low-level architectural decisions cleanly to non-tech juries.</p>
+              <span class="achievement-year">2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL PLAYGROUND (BONUS TECH SHOWCASE) -->
+    <section class="section terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-terminal"></i> Interactive Shell</span>
+          <h2 class="section-title">Pooja's <span class="gradient-text">C-Console</span> Playground</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Feel at home in the command line! Type commands below to interact with my portfolio in pure developer style.</p>
+        </div>
+
+        <div class="terminal-shell">
+          <div class="terminal-shell-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">pooja@portfolio-shell: ~ (bash/c-shell)</div>
+            <div class="terminal-controls">
+              <button class="terminal-help-pill" onclick="runCommandFromBtn('help')">help</button>
+              <button class="terminal-help-pill" onclick="runCommandFromBtn('skills')">skills</button>
+              <button class="terminal-help-pill" onclick="runCommandFromBtn('hackathons')">hackathons</button>
+              <button class="terminal-help-pill" onclick="runCommandFromBtn('clear')">clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-shell-body" id="terminalOutput">
+            <div class="term-line info-line">Welcome to Pooja's Interactive Portfolio Shell v1.0.4 [x86_64-pc-none]</div>
+            <div class="term-line info-line">Type <span class="term-cyan">'help'</span> to view available commands, or click any quick badge above.</div>
+            <div class="term-line">--------------------------------------------------------------------------------</div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">pooja@portfolio:~$</span>
+            <input type="text" id="terminalInput" class="term-input" placeholder="Type a command (e.g. 'hackathons', 'cat about.txt', 'skills')..." autocomplete="off" spellcheck="false">
+            <button class="term-enter-btn" id="terminalSubmit" title="Execute command"><i class="fas fa-level-down-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-paper-plane"></i> Let's Connect</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Whether you have an internship opportunity, a project idea, or want to invite me to your hackathon team — my inbox is always open!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            <h3 class="contact-info-title">Let's talk code &amp; innovation!</h3>
+            <p class="contact-info-desc">
+              I'm actively seeking software developer internships, entry-level engineering roles, and open-source collaborations where I can contribute my C programming, algorithmic rigor, and hackathon spirit.
+            </p>
+
+            <div class="contact-cards-list">
+              <!-- Email Card -->
+              <div class="contact-card" onclick="copyToClipboard('pooja.bca.dev@gmail.com', 'Email copied to clipboard!')">
+                <div class="contact-icon bg-cyan"><i class="fas fa-envelope"></i></div>
+                <div class="contact-text">
+                  <span class="contact-type">Email Address</span>
+                  <span class="contact-val">pooja.bca.dev@gmail.com</span>
+                </div>
+                <button class="copy-pill-btn" title="Click to copy"><i class="far fa-copy"></i></button>
+              </div>
+
+              <!-- Education / Degree -->
+              <div class="contact-card">
+                <div class="contact-icon bg-blue"><i class="fas fa-graduation-cap"></i></div>
+                <div class="contact-text">
+                  <span class="contact-type">Degree</span>
+                  <span class="contact-val">Bachelor of Computer Applications (BCA)</span>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-card">
+                <div class="contact-icon bg-purple"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-text">
+                  <span class="contact-type">Location</span>
+                  <span class="contact-val">India &bull; Available for Remote / Relocation</span>
+                </div>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <div class="contact-card" onclick="copyToClipboard('+91 98765 43210', 'Phone number copied!')">
+                <div class="contact-icon bg-green"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-text">
+                  <span class="contact-type">Phone / Mobile</span>
+                  <span class="contact-val">+91 98765 43210</span>
+                </div>
+                <button class="copy-pill-btn" title="Click to copy"><i class="far fa-copy"></i></button>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-social-footer">
+              <span class="social-footer-title">Profiles:</span>
+              <div class="social-links-row">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-badge-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-badge-link">
+                  <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://hackerrank.com" target="_blank" rel="noopener noreferrer" class="social-badge-link">
+                  <i class="fab fa-hackerrank"></i> HackerRank
+                </a>
+                <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-badge-link">
+                  <i class="fas fa-code"></i> LeetCode
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel">
+            <div class="form-wrapper">
+              <div class="form-header">
+                <h3>Send a Message</h3>
+                <p>Fill out the form below and I'll get back to you within 24 hours.</p>
+              </div>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name" class="form-label"><i class="fas fa-user"></i> Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                    <span class="form-error-msg" id="nameError"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="form-label"><i class="fas fa-envelope"></i> Your Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                    <span class="form-error-msg" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label"><i class="fas fa-tag"></i> Subject *</label>
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry / Job Opportunity / Hackathon Collaboration" required>
+                  <span class="form-error-msg" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label"><i class="fas fa-comment-dots"></i> Message *</label>
+                  <textarea id="message" name="message" class="form-control" rows="5" placeholder="Hi Pooja, I reviewed your C projects and hackathon achievements..." required></textarea>
+                  <span class="form-error-msg" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                  <span class="btn-text-content"><i class="fas fa-paper-plane"></i> Send Message</span>
+                  <span class="btn-spinner hidden"><i class="fas fa-spinner fa-spin"></i> Dispatching...</span>
+                </button>
+              </form>
+
+              <!-- Form Success Feedback -->
+              <div class="form-success-alert hidden" id="formSuccess">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <h4>Thank you for reaching out!</h4>
+                  <p>Your message has been received. I look forward to connecting with you soon.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-brand">
+            <span class="brand-bracket">&lt;</span>
+            <span class="brand-name">Pooja</span>
+            <span class="brand-ext">.c</span>
+            <span class="brand-bracket">/&gt;</span>
+          </a>
+          <p class="footer-tagline">BCA Student &bull; C Systems Programmer &bull; National Hackathon Finalist</p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#hackathons">Hackathons</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#terminal">Terminal</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="currentYear"></span> Pooja. Built with clean HTML5, CSS3, &amp; Vanilla JavaScript. All rights reserved.</p>
+        <p class="footer-quote"><code>printf("Keep hacking, keep building.\n");</code></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" id="modalCategory">Category</span>
+          <h3 id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Injected via JS -->
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com" target="_blank" id="modalGithubBtn" class="btn btn-outline btn-sm">
+          <i class="fab fa-github"></i> View Repository
+        </a>
+        <button class="btn btn-secondary btn-sm" onclick="closeProjectModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
